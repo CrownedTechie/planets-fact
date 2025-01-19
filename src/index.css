@@ -1,19 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--DarkNavy);
+}
+
 :root {
   /* FONTS */
-  --antonio: 'Antonio', serif;
-  --spartan: 'League Spartan', serif;
+  --Antonio: 'Antonio', serif;
+  --Spartan: 'League Spartan', serif;
+
+  --Regular: 400;
+  --Medium: 500;
+  --Bold: 700;
 
   /* COLOURS */
-  --white: #ffffff;
-  --darkNavy: #070724;
-  --darkGray: #38384f;
-  --slateGray: #838391;
-  --aquaBlue: #419ebb;
-  --sunsetOrange: #eda249;
-  --royalPurple: #6f2ed6;
-  --burntRed: #d14c32;
-  --fireRed: #d83a34;
-  --copperOrange: #cd5120;
-  --tealGreen: #1ec2a4;
-  --brightBlue: #2d68f0;
+  --White: #ffffff;
+  --DarkNavy: #070724;
+  --DarkGray: #38384f;
+  --SlateGray: #838391;
+  --AquaBlue: #419ebb;
+  --SunsetOrange: #eda249;
+  --RoyalPurple: #6f2ed6;
+  --BurntRed: #d14c32;
+  --FireRed: #d83a34;
+  --CopperOrange: #cd5120;
+  --TealGreen: #1ec2a4;
+  --BrightBlue: #2d68f0;
+}
+
+.text-xl {
+  font-family: var(--Antonio);
+  font-weight: var(--Medium);
+  font-size: 5rem;
+  line-height: 6.4375rem;
+}
+
+.text-l {
+  font-family: var(--Antonio);
+  font-weight: var(--Medium);
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  letter-spacing: -1.5px;
+}
+
+.text-medium {
+  font-family: var(--Spartan);
+  font-weight: var(--Bold);
+  font-size: .75rem;
+  line-height: 1.5625rem;
+  letter-spacing: 2.6px;
+}
+
+.text-small {
+  font-family: var(--Spartan);
+  font-weight: var(--Bold);
+  font-size: .6875rem;
+  line-height: 1.5625rem;
+  letter-spacing: 1px;
+}
+
+body {
+  font-family: var(--Spartan);
+  font-weight: var(--Regular);
+  font-size: .875rem;
+  line-height: 1.5625rem;
+}
+
+/* default button text uses .text-medium class */
+.active-button {
+  background-color: var(--AquaBlue);
+}
+
+.hover-button {
+  background-color: var(--DarkGray);
+}
+
+/* MOBILE SCREENS */
+@media (max-width: 600px) {
+  .text-xl {
+    font-size: 1.75rem;
+    font-weight: var(--Regular);
+    line-height: 2.2644rem;
+    letter-spacing: -1.05px;
+  }
 }
