@@ -29,6 +29,14 @@
   --BrightBlue: #2d68f0;
 }
 
+body {
+  font-family: var(--Spartan);
+  font-weight: var(--Regular);
+  font-size: .875rem;
+  line-height: 1.5625rem;
+  color: var(--White);
+}
+
 /* .text-xl {
   font-family: var(--Antonio);
   font-weight: var(--Medium);
@@ -66,13 +74,6 @@
   font-size: .6875rem;
   line-height: 1.5625rem;
   letter-spacing: 1px;
-}
-
-body {
-  font-family: var(--Spartan);
-  font-weight: var(--Regular);
-  font-size: .875rem;
-  line-height: 1.5625rem;
 }
 
 /* default button text uses .text-medium class */

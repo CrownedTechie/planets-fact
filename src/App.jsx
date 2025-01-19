@@ -1,10 +1,17 @@
-import { Header } from "./components";
+import { useState } from "react";
+import { Header, MobileNavBar } from "./components";
 
 function App() {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () => {
+    setIsClicked(!isClicked);
+  };
 
   return (
     <>
-      <Header />
+      <Header handleClick={handleClick} />
+      {isClicked && <MobileNavBar />}
     </>
   )
 }
