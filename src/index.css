@@ -29,11 +29,19 @@
   --BrightBlue: #2d68f0;
 }
 
-.text-xl {
+/* .text-xl {
   font-family: var(--Antonio);
   font-weight: var(--Medium);
   font-size: 5rem;
   line-height: 6.4375rem;
+} */
+
+.text-xl {
+  font-family: var(--Antonio);
+  font-size: 1.75rem;
+  font-weight: var(--Regular);
+  line-height: 2.2644rem;
+  letter-spacing: -1.05px;
 }
 
 .text-l {
@@ -77,11 +85,11 @@ body {
 }
 
 /* MOBILE SCREENS */
-@media (max-width: 600px) {
+/* @media (max-width: 1024px) {
   .text-xl {
     font-size: 1.75rem;
     font-weight: var(--Regular);
     line-height: 2.2644rem;
     letter-spacing: -1.05px;
   }
-}
+} */
