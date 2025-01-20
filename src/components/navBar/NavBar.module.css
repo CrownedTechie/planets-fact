@@ -1,7 +1,14 @@
-.mobileNav {
+.nav {
  margin: 1.5rem;
 }
 
-.ul {
- display: flex;
+@media (min-width: 601px) {
+ .ul {
+  display: flex;
+  align-items: center;
+ }
+
+  .nav {
+   margin: 1.5rem 1rem;
+  }
 }

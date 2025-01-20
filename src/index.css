@@ -27,6 +27,9 @@
   --CopperOrange: #cd5120;
   --TealGreen: #1ec2a4;
   --BrightBlue: #2d68f0;
+
+  /* Hover Colour */
+  --hoverColor: #419EBB;
 }
 
 body {

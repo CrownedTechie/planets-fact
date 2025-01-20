@@ -3,19 +3,9 @@ import styles from "./NavBar.module.css";
 
 export const NavBar = () => {
  return ( 
-  <nav className={styles.mobileNav}>
-   <ul>
-    <NavLink /> 
-   </ul>
-  </nav>
- );
-};
-
-export const TabletNavBar = ()=> {
- return (
-  <nav>
+  <nav className={styles.nav}>
    <ul className={styles.ul}>
-    <NavLink />
+    <NavLink /> 
    </ul>
   </nav>
  );
