@@ -86,11 +86,8 @@ body {
 }
 
 /* MOBILE SCREENS */
-/* @media (max-width: 1024px) {
-  .text-xl {
-    font-size: 1.75rem;
-    font-weight: var(--Regular);
-    line-height: 2.2644rem;
-    letter-spacing: -1.05px;
+/* @media (min-width: 601px) {
+  .text-medium {
+    font-size: ;
   }
 } */

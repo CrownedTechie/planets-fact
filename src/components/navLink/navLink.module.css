@@ -27,6 +27,18 @@
 }
 
 .hr {
- background-color: var(--White);
+ border: .03rem solid var(--White);
  opacity: 10%;
+}
+
+@media (min-width: 601px) {
+ .roundedDiv, .arrowRightIcon, .hr {
+  display: none;
+ }
+
+ .p {
+  font-size: .6875rem;
+  line-height: 1.5625rem;
+  letter-spacing: 1px;
+ }
 }

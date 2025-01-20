@@ -1,3 +1,7 @@
 .mobileNav {
- margin: 2rem 1.5rem;
+ margin: 1.5rem;
+}
+
+.ul {
+ display: flex;
 }
