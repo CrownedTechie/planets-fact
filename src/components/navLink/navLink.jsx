@@ -11,7 +11,7 @@ const { planetData } = useContext(PlanetContext);
   <>
    {planetData?.map((item) => (
     <React.Fragment key={item.name} className={styles.fragment}>
-     <li className={styles.li} style={{"--hoverColor": item.colour}}>
+     <li className={styles.li} style={{"--hoverColor": item.colour}} tabIndex="0">
       <div className={styles.div}>
        <div className={styles.roundedDiv} style={{backgroundColor: item.colour}}></div>
        <p className={`${styles.p} text-medium`}>{item.name}</p>

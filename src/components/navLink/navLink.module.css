@@ -5,6 +5,11 @@
  padding: 1.5rem;
 }
 
+.li:focus-visible {
+ outline: 1px yellow dotted;
+ outline-offset: .125rem;
+}
+
 .div {
  display: flex;
  align-items: center;
