@@ -1,68 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--DarkNavy);
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* FONTS */
+  --Antonio: 'Antonio', serif;
+  --Spartan: 'League Spartan', serif;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --Regular: 400;
+  --Medium: 500;
+  --Bold: 700;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  /* COLOURS */
+  --White: #ffffff;
+  --DarkNavy: #070724;
+  --DarkGray: #38384f;
+  --SlateGray: #838391;
+  --AquaBlue: #419ebb;
+  --SunsetOrange: #eda249;
+  --RoyalPurple: #6f2ed6;
+  --BurntRed: #d14c32;
+  --FireRed: #d83a34;
+  --CopperOrange: #cd5120;
+  --TealGreen: #1ec2a4;
+  --BrightBlue: #2d68f0;
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  /* Hover Colour */
+  --hoverColor: #419EBB;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: var(--Spartan);
+  font-weight: var(--Regular);
+  font-size: .875rem;
+  line-height: 1.5625rem;
+  color: var(--White);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* .text-xl {
+  font-family: var(--Antonio);
+  font-weight: var(--Medium);
+  font-size: 5rem;
+  line-height: 6.4375rem;
+} */
+
+.text-xl {
+  font-family: var(--Antonio);
+  font-size: 1.75rem;
+  font-weight: var(--Regular);
+  line-height: 2.2644rem;
+  letter-spacing: -1.05px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.text-l {
+  font-family: var(--Antonio);
+  font-weight: var(--Medium);
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  letter-spacing: -1.5px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.text-medium {
+  font-family: var(--Spartan);
+  font-weight: var(--Bold);
+  font-size: .9375rem;
+  line-height: 1.5625rem;
+  letter-spacing: 2.6px;
 }
+
+.text-small {
+  font-family: var(--Spartan);
+  font-weight: var(--Bold);
+  font-size: .6875rem;
+  line-height: 1.5625rem;
+  letter-spacing: 1px;
+}
+
+/* default button text uses .text-medium class */
+.active-button {
+  background-color: var(--AquaBlue);
+}
+
+.hover-button {
+  background-color: var(--DarkGray);
+}
+
+/* MOBILE SCREENS */
+/* @media (min-width: 601px) {
+  .text-medium {
+    font-size: ;
+  }
+} */

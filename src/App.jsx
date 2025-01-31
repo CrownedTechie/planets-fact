@@ -1,11 +1,13 @@
-
-// import './App.css'
+import { Content, Header } from "./components";
 
 function App() {
-
   return (
     <>
-      <h1>THE PLANETS</h1>
+      <Header />
+
+      <main>
+        <Content />
+      </main>
     </>
   )
 }
