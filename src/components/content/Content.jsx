@@ -7,8 +7,8 @@ import styles from "./Content.module.css";
 export const Content = () => {
  return ( 
   <React.Fragment>
-   <nav>
-    <ul className={styles.ul}> 
+   <nav className={styles.nav}>
+    <ul className={`${styles.ul} text-medium`}> 
       {/* TABS WILL GO HERE */}
       <Tabs />
     </ul>

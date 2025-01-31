@@ -1,8 +1,11 @@
+import styles from "./Tabs.module.css";
+
+
 export const Tabs = () => {
  return ( 
   <>
    <li>
-    <p>overview</p>
+    <p className={`${styles.p}`}>overview</p>
    </li>
 
    <li>
