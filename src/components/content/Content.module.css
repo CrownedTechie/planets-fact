@@ -3,26 +3,34 @@
  justify-content: center;
  align-items: center;
  padding: 1rem 1.5rem;
- border: 1px solid green;
+ border-bottom: .03rem solid rgba(255, 255, 255, 0.2);
 }
 
 .ul{
  display: flex;
- gap: 2rem;
+ align-items: center;
+ justify-content: space-between;
+ /* gap: 2.5rem; */
  list-style: none;
  font-size: .875rem;
  font-weight: 500;
  text-transform: uppercase;
  color: rgba(255, 255, 255, 0.5);
- border: 1px solid red;
-
+ width: 80%;
 }
 
+
+/* MOBILE SCREENS */
 @media (max-width: 600px) {
+.nav {
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
  .ul {
    font-size: .75rem;
-   font-weight: 500;
-   text-transform: uppercase;
    color: rgba(255, 255, 255, 0.5);
+   padding: 1rem 0;
  }
 }

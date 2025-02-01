@@ -1,17 +1,29 @@
 .nav {
- margin: 0 ;
- padding: 1rem;
+  margin: 0;
 }
 
+/* MOBILE SCREENS ONLY */
+@media (max-width: 600px) {
+  .nav {
+    padding: 0 2rem;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+  }
+}
+
+/* > TAB SCREENS */
 @media (min-width: 601px) {
- .ul {
+  .nav {
+    padding: 1rem;
+  }
+
+  .ul {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
- }
-
-  .nav {
-   margin: 0rem 0rem;
   }
 }
