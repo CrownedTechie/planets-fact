@@ -5,7 +5,7 @@
 /* MOBILE SCREENS ONLY */
 @media (max-width: 600px) {
   .nav {
-    padding: 0 2rem;
+    padding: 1.5rem 1rem;
     position: absolute;
     top: 70px;
     left: 0;

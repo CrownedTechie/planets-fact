@@ -88,6 +88,13 @@ body {
   background-color: var(--DarkGray);
 }
 
+main {
+  background-image: url("./assets/background-stars.svg");
+  background-size: cover;
+  min-height: 100vh;
+  background-position: center;
+}
+
 /* MOBILE SCREENS */
 /* @media (min-width: 601px) {
   .text-medium {

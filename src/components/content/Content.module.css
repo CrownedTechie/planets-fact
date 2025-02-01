@@ -3,7 +3,6 @@
  justify-content: center;
  align-items: center;
  padding: 1rem 1.5rem;
- border-bottom: .03rem solid rgba(255, 255, 255, 0.2);
 }
 
 .ul{
@@ -26,6 +25,7 @@
   padding: 0;
   position: relative;
   z-index: 1;
+  border-bottom: .03rem solid rgba(255, 255, 255, 0.2);
 }
 
  .ul {

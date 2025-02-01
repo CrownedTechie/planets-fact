@@ -16,6 +16,7 @@ export const Content = () => {
 
    <figure>
     {/* PICTURE WILL GO HERE AND BE CHANGING DEPENDING ON THE TAB ABOVE SELECTED */}
+    <img src="" alt="" />
    </figure>
 
    <div>
