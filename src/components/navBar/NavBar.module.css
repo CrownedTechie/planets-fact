@@ -7,10 +7,12 @@
   .nav {
     padding: 1.5rem 1rem;
     position: absolute;
-    top: 70px;
+    top: 4.375rem;
     left: 0;
     z-index: 9;
     width: 100%;
+    min-height: 100vh;
+    border-bottom: .03rem solid var(--DarkGray);
   }
 }
 

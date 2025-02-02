@@ -55,7 +55,8 @@
  } */
 
  .p {
-  font-size: .6875rem;
+  font-size: .85rem;
+  font-weight: var(--Medium);
   line-height: 1.5625rem;
   letter-spacing: 1px;
   opacity: 75%;

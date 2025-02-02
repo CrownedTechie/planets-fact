@@ -55,3 +55,23 @@
  }
  
 }
+
+@media (min-width: 1200px) {
+ .article {
+  gap: 2rem;
+  padding: 0;
+ }
+
+ .article article > h3 {
+  font-size: .75rem;
+  line-height: 1.5625rem;
+ }
+
+  .article article > p {
+   font-family: var(--Antonio);
+   font-weight: var(--Regular);
+   font-size: 2.5rem;
+   letter-spacing: -1.5px;
+   line-height: 3.325rem;
+  }
+}

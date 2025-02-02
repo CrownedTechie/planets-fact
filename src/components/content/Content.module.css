@@ -29,6 +29,7 @@
   margin: auto;
   width: 50%;
   max-width: 100%;
+  height: auto;
 }
 
 .planetDetailDiv {
@@ -116,6 +117,11 @@
     padding: 0;
   }
 
+  .h2 {
+    font-size: 3rem;
+    line-height: 62.11px;
+  }
+
   .nav {
     grid-area: nav;
     padding: 0;
@@ -133,5 +139,60 @@
   .articleDiv {
     grid-area: articleDiv;
     margin-top: 3rem;
+  }
+}
+
+
+/* > BIG SCREENS */
+@media (min-width: 1200px) {
+  .contentDiv {
+    grid-template-areas:
+      'figure planetDetailDiv'
+      'figure nav'
+      'articleDiv articleDiv';
+    padding: 2rem 3rem;
+    gap: 2rem;
+  }
+
+  .figure {
+    margin-bottom: 0;
+  }
+
+  .figure img {
+    width: 70%;
+  }
+
+  .planetDetailDiv {
+    width: 60%;
+    padding: 0;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+
+  .h2 {
+    font-size: 5rem;
+    line-height: 103.52px;
+  }
+
+  .p {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 25px;
+  }
+
+  .nav {
+    width: 60%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .articleDiv {
+    width: 80%;
+    margin: 2rem auto;
+  }
+
+  .source {
+    font-size: 1rem;
+    line-height: 25px;
   }
 }

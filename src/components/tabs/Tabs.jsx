@@ -14,14 +14,14 @@ export const Tabs = () => {
    </li>
 
    <li className={styles.li}>
-    <p>
-     {isLargeScreen && <span className={styles.span}>02</span>} 
+    <p className={`${styles.p}`}>
+     {isLargeScreen && <span className={styles.span}>02</span> } 
      structure
      </p>
    </li>
 
    <li className={styles.li}>
-    <p>
+    <p className={`${styles.p}`}>
      {isLargeScreen && <span className={styles.span}>03</span>} 
      surface
     </p>
