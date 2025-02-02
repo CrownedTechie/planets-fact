@@ -38,6 +38,10 @@ body {
   font-size: .875rem;
   line-height: 1.5625rem;
   color: var(--White);
+  background-image: url("./assets/background-stars.svg");
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
 }
 
 /* .text-xl {
@@ -86,6 +90,12 @@ body {
 
 .hover-button {
   background-color: var(--DarkGray);
+}
+
+main {
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 
 /* MOBILE SCREENS */
