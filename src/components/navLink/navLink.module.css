@@ -50,9 +50,22 @@
   cursor: pointer;
  }
 
- /* .li:hover {
-  border: 1px solid var(--hoverColor);
- } */
+ .li::after {
+  content: '';
+  position: absolute;
+  top: -1rem;
+  width: 0%;
+ }
+
+.li:hover::after {
+ width: 100%;
+ height: .25rem;
+ background-color: var(--hoverColor);
+}
+
+.li:hover .p {
+ opacity: 100%;
+}
 
  .p {
   font-size: .85rem;
@@ -63,26 +76,9 @@
  }
 }
 
-/* > LAPTOP SCREENS */
+/* > BIG SCREENS */
 @media (min-width: 1025px) {
  .p {
   font-size: 1rem;
- }
-
- .li::after {
-  content: '';
-  position: absolute;
-  top: -1rem;
-  width: 0%;
- }
-
- .li:hover::after {
-  width: 100%;
-  height: 4px;
-  background-color: var(--hoverColor);
- }
-
- .li:hover .p {
-  opacity: 100%;
  }
 }
