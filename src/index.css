@@ -40,7 +40,7 @@ body {
   color: var(--White);
   background-image: url("./assets/background-stars.svg");
   background-size: cover;
-  min-height: 100vh;
+  height: 100vh;
   background-position: center;
 }
 
@@ -90,6 +90,12 @@ body {
 
 .hover-button {
   background-color: var(--DarkGray);
+}
+
+main {
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 
 /* MOBILE SCREENS */

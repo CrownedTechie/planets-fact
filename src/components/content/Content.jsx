@@ -38,7 +38,7 @@ export const Content = () => {
       </p>
     </div>
 
-    <div>
+    <div className={styles.articleDiv}>
       <Article />
     </div>
   </div>
