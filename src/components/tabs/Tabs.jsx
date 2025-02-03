@@ -13,7 +13,7 @@ export const Tabs = ({activeTab, setActiveTab, planetColor}) => {
         key={tab} 
         className={`${styles.li} ${activeTab === tab ? styles.active : styles.onHover}`} 
         onClick={() => setActiveTab(tab)}
-        style={{"--activeColor": planetColor }}
+        style={{"--activeColor": planetColor}}
       >
         <p className={`${styles.p}`}>
           {isLargeScreen && <span className={styles.span}>0{index + 1}</span>}

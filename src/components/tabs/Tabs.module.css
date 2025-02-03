@@ -1,6 +1,6 @@
 
 @media (max-width: 600px) {
-  .li {
+  .li, .active {
     position: relative;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
@@ -13,14 +13,14 @@
     width: 0%;
   }
 
-  .li:hover::after {
+  .active::after {
     width: 100%;
-    height: 4px;
-    background-color: var(--hoverColor);
+    height: .25rem;
+    background-color: var(--activeColor);
   }
 
-  .li:hover .p {
-    opacity: 100%;
+  .active p, .li:hover p{
+    color: var(--White);
   }
 }
 
