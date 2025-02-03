@@ -29,10 +29,24 @@
     border: .03rem solid var(--DarkGray);
     padding: .7rem 1.5rem;
     width: 100%;
+    cursor: pointer;
   }
 
   .span {
     color: rgba(255, 255, 255, 0.5);
     margin-right: 1rem;
+    background: transparent;
+  }
+
+  .p {
+    background: transparent;
+  }
+
+  .active {
+    background-color: var(--activeColor);
+  }
+
+  .hover {
+    background-color: var(--DarkGray);
   }
 }

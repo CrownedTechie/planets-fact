@@ -1,31 +1,32 @@
 import styles from "./Tabs.module.css";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 
-export const Tabs = () => {
+const tabs = ["overview", "structure", "geology"];
+
+export const Tabs = ({activeTab, setActiveTab, planetColor}) => {
   const isLargeScreen = useMediaQuery("(min-width: 601px)");
 
  return ( 
   <>
-   <li className={styles.li}>
-    <p className={`${styles.p}`}> 
-     {isLargeScreen && <span className={styles.span}>01</span>} 
-     overview
-    </p>
-   </li>
-
-   <li className={styles.li}>
-    <p className={`${styles.p}`}>
-     {isLargeScreen && <span className={styles.span}>02</span> } 
-     structure
-     </p>
-   </li>
-
-   <li className={styles.li}>
-    <p className={`${styles.p}`}>
-     {isLargeScreen && <span className={styles.span}>03</span>} 
-     surface
-    </p>
-   </li>
+    {tabs.map((tab, index) => (
+      <li 
+        className={`${styles.li} ${activeTab === tab ? styles.active : ""}`} 
+        onClick={() => setActiveTab(tab)}
+        style={{"--activeColor": planetColor }}
+      >
+        <p className={`${styles.p}`}>
+          {isLargeScreen && <span className={styles.span}>0{index + 1}</span>}
+          {isLargeScreen 
+            ? tab === "structure" 
+              ? "internal structure"
+              : tab === "geology"
+                ? "surface geology"
+                : "overview"
+            : tab
+          }
+        </p>
+      </li>
+    ))}
   </>
  );
 }

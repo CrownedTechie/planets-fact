@@ -1,34 +1,59 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Tabs } from "../tabs/Tabs";
 import styles from "./Content.module.css";
 import earthPic from "../../assets/planet-earth.svg";
 import sourceIcon from "../../assets/icon-source.svg";
 import { Article } from "../article/Article";
+import { useParams } from "react-router-dom";
+import { PlanetContext } from "../../context/planetContext";
 
+const tabs = ["overview", "structure", "geology"];
 
 export const Content = () => {
+  const { planetName } = useParams();
+  const { planetData } = useContext(PlanetContext);
+  const [ activeTab, setActiveTab ] = useState("overview");
+
+  const selectedPlanet = 
+    planetData.find(planet => planet.name.toLowerCase() === planetName.toLowerCase()) ||
+    planetData.find(planet => planet.name.toLowerCase() === "earth");
+
+  if (!selectedPlanet) return <p>Planet not found</p>;
+
  return ( 
   <div className={styles.contentDiv}>
     <nav className={styles.nav}>
       <ul className={`${styles.ul} text-medium`}> 
-        <Tabs />
+        <Tabs 
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+          planetColor={selectedPlanet.colour}
+        />
       </ul>
     </nav>
 
     <figure className={styles.figure}>
-      {/* PICTURE WILL GO HERE AND BE CHANGING DEPENDING ON THE TAB ABOVE SELECTED */}
-      <img src={earthPic} alt="Earth" />
+      <img 
+        src={
+          activeTab === "structure"
+            ? selectedPlanet.images.internal
+            : activeTab === "geology"
+              ? selectedPlanet.images.geology
+              : selectedPlanet.images.planet
+        } 
+        alt={selectedPlanet.name}
+      />
     </figure>
 
     <div className={styles.planetDetailDiv}>
       {/* CONTENT OF THE PLANET GOES HERE */}
-      <h2 className={`${styles.h2} text-l`}>earth</h2>
-      <p className={`${styles.p} text-small`}>Third planet from the Sun and the only known planet to harbor life. About 29.2% of Earth's surface is land with remaining 70.8% is covered with water. Earth's distance from the Sun, physical properties and geological history have allowed life to evolve and thrive.</p>
+      <h2 className={`${styles.h2} text-l`}>{selectedPlanet.name}</h2>
+      <p className={`${styles.p} text-small`}>{selectedPlanet[activeTab].content}</p>
 
       <p className={styles.source}>
         <span>Source :</span>
         <a 
-          href="" 
+          href={selectedPlanet[activeTab].source}
           target="_blank" 
           rel="noopener noreferrer" 
         >
@@ -39,7 +64,12 @@ export const Content = () => {
     </div>
 
     <div className={styles.articleDiv}>
-      <Article />
+      <Article 
+        rotation={selectedPlanet.rotation}
+        revolution={selectedPlanet.revolution}
+        radius={selectedPlanet.radius}
+        temperature={selectedPlanet.temperature}
+      />
     </div>
   </div>
  );

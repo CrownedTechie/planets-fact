@@ -1,27 +1,27 @@
 import styles from "./Article.module.css";
 
-export const Article = () => {
+export const Article = ({ rotation, revolution, radius, temperature}) => {
  return ( 
   <article className={styles.article}>
 
    <article>
     <h3>rotation time</h3>
-    <p>0.99 days</p>
+    <p>{rotation}</p>
    </article>
 
    <article>
     <h3>revolution time</h3>
-    <p>224.7days</p>
+    <p>{revolution}</p>
    </article>
 
    <article>
     <h3>radius</h3>
-    <p>6051.8km</p>
+    <p>{radius}</p>
    </article>
 
    <article>
     <h3>average temp.</h3>
-    <p>471°c</p>
+    <p>{temperature}</p>
    </article>
 
   </article>

@@ -30,6 +30,8 @@
 
   /* Hover Colour */
   --hoverColor: #419EBB;
+
+  --activeColor: #419EBB;
 }
 
 body {
@@ -81,15 +83,6 @@ body {
   font-size: .6875rem;
   line-height: 1.5625rem;
   letter-spacing: 1px;
-}
-
-/* default button text uses .text-medium class */
-.active-button {
-  background-color: var(--AquaBlue);
-}
-
-.hover-button {
-  background-color: var(--DarkGray);
 }
 
 main {
