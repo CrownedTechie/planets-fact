@@ -46,7 +46,7 @@
     background-color: var(--activeColor);
   }
 
-  .hover {
+  .onHover:hover {
     background-color: var(--DarkGray);
   }
 }
