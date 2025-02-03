@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-// import { NavLink } from "../navLink/navLink";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import { PlanetContext } from "../../context/planetContext";
@@ -17,12 +16,11 @@ export const NavBar = () => {
  return ( 
   <nav className={styles.nav}>
    <ul className={styles.ul}>
-    {/* <NavLink />  */}
     {planetData?.map((planet) => (
      <>
       <NavLink 
        key={planet.name}
-       className={styles.li} 
+       className={({ isActive }) => `${styles.li} ${isActive ? styles.active : ""}`}
        style={{"--hoverColor": planet.activeColor}} 
        tabIndex="0"
        to={`planets/${planet.name.toLowerCase()}`}

@@ -1,6 +1,6 @@
 
 @media (max-width: 600px) {
-  .li, .active {
+  .li {
     position: relative;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
