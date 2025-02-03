@@ -9,7 +9,8 @@ export const Tabs = ({activeTab, setActiveTab, planetColor}) => {
  return ( 
   <>
     {tabs.map((tab, index) => (
-      <li 
+      <li
+        key={tab} 
         className={`${styles.li} ${activeTab === tab ? styles.active : styles.onHover}`} 
         onClick={() => setActiveTab(tab)}
         style={{"--activeColor": planetColor }}

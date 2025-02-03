@@ -27,20 +27,21 @@ export const Content = () => {
         <Tabs 
           activeTab={activeTab}
           setActiveTab={setActiveTab}
-          planetColor={selectedPlanet.colour}
+          planetColor={selectedPlanet.activeColor}
         />
       </ul>
     </nav>
 
     <figure className={styles.figure}>
       <img 
-        src={
-          activeTab === "structure"
-            ? selectedPlanet.images.internal
-            : activeTab === "geology"
-              ? selectedPlanet.images.geology
-              : selectedPlanet.images.planet
-        } 
+        // src={
+        //   activeTab === "structure"
+        //     ? selectedPlanet.images.internal
+        //     : activeTab === "geology"
+        //       ? selectedPlanet.images.geology
+        //       : selectedPlanet.images.planet
+        // } 
+        src={selectedPlanet.internal}
         alt={selectedPlanet.name}
       />
     </figure>

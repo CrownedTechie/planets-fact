@@ -14,12 +14,12 @@ const { planetData } = useContext(PlanetContext);
     <React.Fragment key={planet.name}>
      <Link  
       className={styles.li} 
-      style={{"--hoverColor": planet.colour}} 
+      style={{"--hoverColor": planet.activeColor}} 
       tabIndex="0"
       to={`planets/${planet.name.toLowerCase()}`}
      >
       <div className={styles.div}>
-       <div className={styles.roundedDiv} style={{backgroundColor: planet.colour}}></div>
+       <div className={styles.roundedDiv} style={{backgroundColor: planet.color}}></div>
        <p className={`${styles.p} text-medium`}>{planet.name}</p>
       </div>
       
