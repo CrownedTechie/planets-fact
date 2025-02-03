@@ -34,14 +34,14 @@ export const Content = () => {
 
     <figure className={styles.figure}>
       <img 
-        // src={
-        //   activeTab === "structure"
-        //     ? selectedPlanet.images.internal
-        //     : activeTab === "geology"
-        //       ? selectedPlanet.images.geology
-        //       : selectedPlanet.images.planet
-        // } 
-        src={selectedPlanet.internal}
+        src={
+          activeTab === "structure"
+            ? selectedPlanet.images.internal
+            : activeTab === "geology"
+              ? selectedPlanet.images.geology
+              : selectedPlanet.images.planet
+        } 
+          
         alt={selectedPlanet.name}
       />
     </figure>
