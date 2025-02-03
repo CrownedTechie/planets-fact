@@ -1,3 +1,4 @@
+import { Navigate, Route, Routes } from "react-router-dom";
 import { Content, Header } from "./components";
 
 function App() {
@@ -6,7 +7,11 @@ function App() {
       <Header />
 
       <main>
-        <Content />
+        <Routes>
+          <Route path="/" element={<Navigate to="/planets/earth" replace />} />
+          <Route path="/planets/:planetName" element={<Content />} />
+        </Routes>
+        {/* <Content /> */}
       </main>
     </>
   )
