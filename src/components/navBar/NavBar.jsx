@@ -5,13 +5,8 @@ import { PlanetContext } from "../../context/planetContext";
 import arrowRightIcon from "../../assets/icon-chevron.svg";
 
 
-export const NavBar = () => {
+export const NavBar = ({setIsOpen}) => {
  const { planetData } = useContext(PlanetContext);
-
- const handleClick = () => {
-  Navigate('kskkdk');
-  setIsOpen(false)
- };
 
  return ( 
   <nav className={styles.nav}>
@@ -24,6 +19,7 @@ export const NavBar = () => {
        style={{"--hoverColor": planet.activeColor}} 
        tabIndex="0"
        to={`planets/${planet.name.toLowerCase()}`}
+       onClick={() => setIsOpen(false)}
       >
        <div className={styles.div}>
         <div className={styles.roundedDiv} style={{backgroundColor: planet.color}}></div>
