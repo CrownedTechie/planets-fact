@@ -30,6 +30,8 @@
 
   /* Hover Colour */
   --hoverColor: #419EBB;
+
+  --activeColor: #419EBB;
 }
 
 body {
@@ -38,18 +40,7 @@ body {
   font-size: .875rem;
   line-height: 1.5625rem;
   color: var(--White);
-  background-image: url("./assets/background-stars.svg");
-  background-size: cover;
-  height: 100vh;
-  background-position: center;
 }
-
-/* .text-xl {
-  font-family: var(--Antonio);
-  font-weight: var(--Medium);
-  font-size: 5rem;
-  line-height: 6.4375rem;
-} */
 
 .text-xl {
   font-family: var(--Antonio);
@@ -83,24 +74,9 @@ body {
   letter-spacing: 1px;
 }
 
-/* default button text uses .text-medium class */
-.active-button {
-  background-color: var(--AquaBlue);
-}
-
-.hover-button {
-  background-color: var(--DarkGray);
-}
-
 main {
  display: flex;
  align-items: center;
  justify-content: center;
+ background-color: transparent;
 }
-
-/* MOBILE SCREENS */
-/* @media (min-width: 601px) {
-  .text-medium {
-    font-size: ;
-  }
-} */

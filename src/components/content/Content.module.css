@@ -73,6 +73,10 @@
   font-weight: var(--Medium);
 }
 
+.contentDiv, .figure, .figure img, .planetDetailDiv, .articleDiv {
+  background-color: transparent;
+}
+
 
 /* MOBILE SCREENS */
 @media (max-width: 600px) {
@@ -159,7 +163,7 @@
   }
 
   .figure img {
-    width: 70%;
+    width: 60%;
   }
 
   .planetDetailDiv {

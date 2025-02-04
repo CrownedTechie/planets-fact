@@ -35,7 +35,7 @@ export const Header = () => {
     {isLargeScreen && <NavBar />}
    </header>
    <hr className={styles.hr}/>
-   {isSmallScreen && isOpen && <NavBar />}
+   {isSmallScreen && isOpen && <NavBar setIsOpen={setIsOpen}/>}
   </> 
  );
 };
