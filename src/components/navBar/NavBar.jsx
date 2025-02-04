@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import { PlanetContext } from "../../context/planetContext";
@@ -12,9 +12,8 @@ export const NavBar = ({setIsOpen}) => {
   <nav className={styles.nav}>
    <ul className={styles.ul}>
     {planetData?.map((planet) => (
-     <>
+     <React.Fragment key={planet.name}>
       <NavLink 
-       key={planet.name}
        className={({ isActive }) => `${styles.li} ${isActive ? styles.active : ""}`}
        style={{"--hoverColor": planet.activeColor}} 
        tabIndex="0"
@@ -29,7 +28,7 @@ export const NavBar = ({setIsOpen}) => {
        <img src={arrowRightIcon} alt="arrow right icon" className={styles.arrowRightIcon} />
       </NavLink>
       <hr className={styles.hr} />
-     </>
+     </React.Fragment>
     ))}
    </ul>
   </nav>

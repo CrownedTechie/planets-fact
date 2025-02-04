@@ -73,6 +73,10 @@
   font-weight: var(--Medium);
 }
 
+.contentDiv, .figure, .figure img, .planetDetailDiv, .articleDiv {
+  background-color: transparent;
+}
+
 
 /* MOBILE SCREENS */
 @media (max-width: 600px) {
