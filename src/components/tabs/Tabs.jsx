@@ -1,10 +1,21 @@
 import styles from "./Tabs.module.css";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
+import { useEffect } from "react";
 
 const tabs = ["overview", "structure", "geology"];
 
-export const Tabs = ({activeTab, setActiveTab, planetColor}) => {
+export const Tabs = ({planetColor, searchParams, setSearchParams, activeTab}) => {
   const isLargeScreen = useMediaQuery("(min-width: 601px)");
+
+  useEffect(() => {
+    if (!searchParams.get("tab")) {
+      setSearchParams({ tab: "overview" }, { replace: true }); 
+    }
+  }, [searchParams, setSearchParams]);
+
+  const handleClick = (tabName) => {
+    setSearchParams({tab: tabName});
+  };
 
  return ( 
   <>
@@ -12,7 +23,7 @@ export const Tabs = ({activeTab, setActiveTab, planetColor}) => {
       <li
         key={tab} 
         className={`${styles.li} ${activeTab === tab ? styles.active : styles.onHover}`} 
-        onClick={() => setActiveTab(tab)}
+        onClick={() => handleClick(tab)}
         style={{"--activeColor": planetColor}}
       >
         <p className={`${styles.p}`}>

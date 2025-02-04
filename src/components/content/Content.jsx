@@ -1,18 +1,17 @@
 import React, { useContext, useState } from "react";
 import { Tabs } from "../tabs/Tabs";
 import styles from "./Content.module.css";
-import earthPic from "../../assets/planet-earth.svg";
 import sourceIcon from "../../assets/icon-source.svg";
 import { Article } from "../article/Article";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import { PlanetContext } from "../../context/planetContext";
-
-const tabs = ["overview", "structure", "geology"];
 
 export const Content = () => {
   const { planetName } = useParams();
   const { planetData } = useContext(PlanetContext);
-  const [ activeTab, setActiveTab ] = useState("overview");
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const activeTab = searchParams.get("tab") || "overview";
 
   const selectedPlanet = 
     planetData.find(planet => planet.name.toLowerCase() === planetName.toLowerCase()) ||
@@ -25,9 +24,10 @@ export const Content = () => {
     <nav className={styles.nav}>
       <ul className={`${styles.ul} text-medium`}> 
         <Tabs 
-          activeTab={activeTab}
-          setActiveTab={setActiveTab}
           planetColor={selectedPlanet.activeColor}
+          searchParams={searchParams} 
+          setSearchParams={setSearchParams}
+          activeTab={activeTab}
         />
       </ul>
     </nav>
