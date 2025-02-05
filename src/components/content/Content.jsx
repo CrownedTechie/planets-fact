@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useMemo, useRef, useState } from "react";
+import React, { useContext } from "react";
 import { Tabs } from "../tabs/Tabs";
 import styles from "./Content.module.css";
 import sourceIcon from "../../assets/icon-source.svg";
