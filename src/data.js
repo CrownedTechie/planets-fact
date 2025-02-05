@@ -233,3 +233,14 @@ export const data = [
     }
   }
 ]
+
+export const planetEnum = {
+  mercury: 1,
+  venus: 2,
+  earth: 3,
+  mars: 4,
+  jupiter: 5,
+  saturn: 6,
+  uranus: 7,
+  neptune: 8
+};
