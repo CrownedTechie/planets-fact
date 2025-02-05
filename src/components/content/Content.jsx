@@ -5,7 +5,7 @@ import sourceIcon from "../../assets/icon-source.svg";
 import { Article } from "../article/Article";
 import { useParams, useSearchParams } from "react-router-dom";
 import { PlanetContext } from "../../context/planetContext";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 export const Content =() => {
   const { planetName } = useParams();
@@ -24,12 +24,14 @@ export const Content =() => {
     delay: 0.2,
   };
 
+  const prefersReducedMotion = useReducedMotion()
+
  return ( 
   <motion.div
-    initial={{ x: "20%", opacity: 0 }}
-    animate={{ x: 0, opacity: 1 }}
-    exit={{ x: "-20%", opacity: 0, transition: { duration: 0.2 } }}
-    transition={transition}
+    initial={prefersReducedMotion ? false : { x: "20%", opacity: 0 }}
+    animate={prefersReducedMotion ? {} : { x: 0, opacity: 1 }}
+    exit={prefersReducedMotion ? {} : { x: "-20%", opacity: 0, transition: { duration: 0.2 } }}
+    transition={prefersReducedMotion ? {} : transition}
     className={styles.contentDiv}
   >
       <nav className={styles.nav}>
