@@ -21,6 +21,13 @@ export const Tabs = ({planetColor, searchParams, setSearchParams, activeTab}) =>
     }
   };
 
+  const getTabLabel = (tab) => {
+    if (!isLargeScreen) return tab;
+    return tab === "structure" ? "internal structure" 
+        : tab === "geology" ? "surface geology" 
+        : "overview";
+  };
+
  return ( 
   <>
     {tabs.map((tab, index) => (
@@ -37,14 +44,7 @@ export const Tabs = ({planetColor, searchParams, setSearchParams, activeTab}) =>
       >
         <p className={`${styles.p}`}>
           {isLargeScreen && <span className={styles.span}>0{index + 1}</span>}
-          {isLargeScreen 
-            ? tab === "structure" 
-              ? "internal structure"
-              : tab === "geology"
-                ? "surface geology"
-                : "overview"
-            : tab
-          }
+          {getTabLabel(tab)}
         </p>
       </li>
     ))}
