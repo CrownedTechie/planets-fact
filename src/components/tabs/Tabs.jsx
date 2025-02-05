@@ -8,14 +8,16 @@ export const Tabs = ({planetColor, searchParams, setSearchParams, activeTab}) =>
   const isLargeScreen = useMediaQuery("(min-width: 601px)");
 
   useEffect(() => {
-    if (!searchParams.get("tab")) {
-      setSearchParams({ tab: "overview" }, { replace: true }); 
+    const tab = searchParams.get("tab");
+    if (!tab) {
+      setSearchParams({ tab: "overview" }, { replace: true });
     }
-  }, [searchParams, setSearchParams]);
+  }, [searchParams.get("tab"), setSearchParams]);
+
 
   const handleClick = (newTab) => {
      if (newTab !== activeTab) {
-      setSearchParams({ tab: newTab });
+      setSearchParams({ tab: newTab }, { replace: true });
     }
   };
 
@@ -24,9 +26,14 @@ export const Tabs = ({planetColor, searchParams, setSearchParams, activeTab}) =>
     {tabs.map((tab, index) => (
       <li
         key={tab} 
+        role="button"
         className={`${styles.li} ${activeTab === tab ? styles.active : styles.onHover}`} 
         onClick={() => handleClick(tab)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") handleClick(tab);
+        }}
         style={{"--activeColor": planetColor}}
+        tabIndex="0"
       >
         <p className={`${styles.p}`}>
           {isLargeScreen && <span className={styles.span}>0{index + 1}</span>}

@@ -63,7 +63,7 @@ export const Content =() => {
         <h2 className={`${styles.h2} text-l`}>{selectedPlanet.name}</h2>
         <p className={`${styles.p} text-small`}>{selectedPlanet[activeTab].content}</p>
 
-        <p className={styles.source}>
+        <p className={styles.source} >
           <span>Source :</span>
           <a 
             href={selectedPlanet[activeTab].source}

@@ -13,6 +13,11 @@
     width: 0%;
   }
 
+  .li:focus-visible {
+    outline: 1px yellow dotted;
+    outline-offset: .125rem;
+  }
+
   .active::after {
     width: 100%;
     height: .25rem;
@@ -34,6 +39,11 @@
     padding: .7rem 1.5rem;
     width: 100%;
     cursor: pointer;
+  }
+
+  .li:focus-visible {
+    outline: 1px yellow dotted;
+    outline-offset: .125rem;
   }
 
   .span {
