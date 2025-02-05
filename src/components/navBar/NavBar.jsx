@@ -5,7 +5,7 @@ import { PlanetContext } from "../../context/planetContext";
 import arrowRightIcon from "../../assets/icon-chevron.svg";
 
 export const NavBar = ({setIsOpen}) => {
- const { planetData } = useContext(PlanetContext);
+  const { planetData } = useContext(PlanetContext);
 
  return ( 
   <nav className={styles.nav}>

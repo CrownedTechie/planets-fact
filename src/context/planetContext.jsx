@@ -12,10 +12,9 @@ const PlanetProvider = ({children}) => {
  useEffect(() => {
   setPlanetData(data);
  }, []);
-
- // console.log(planetData);
+ 
  return (
-  <PlanetContext.Provider value={{ planetData, setPlanetData }}>
+  <PlanetContext.Provider value={{ planetData, setPlanetData}}>
    {children}
   </PlanetContext.Provider>
  )

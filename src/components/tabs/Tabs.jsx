@@ -13,8 +13,10 @@ export const Tabs = ({planetColor, searchParams, setSearchParams, activeTab}) =>
     }
   }, [searchParams, setSearchParams]);
 
-  const handleClick = (tabName) => {
-    setSearchParams({tab: tabName});
+  const handleClick = (newTab) => {
+     if (newTab !== activeTab) {
+      setSearchParams({ tab: newTab });
+    }
   };
 
  return ( 
