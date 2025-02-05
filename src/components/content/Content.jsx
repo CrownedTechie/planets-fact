@@ -1,15 +1,16 @@
-import React, { useContext, useEffect, useMemo, useRef, useState } from "react";
+import React, { useContext } from "react";
 import { Tabs } from "../tabs/Tabs";
 import styles from "./Content.module.css";
 import sourceIcon from "../../assets/icon-source.svg";
 import { Article } from "../article/Article";
 import { useParams, useSearchParams } from "react-router-dom";
 import { PlanetContext } from "../../context/planetContext";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 export const Content =() => {
   const { planetName } = useParams();
   const { planetData } = useContext(PlanetContext);
+  const prefersReducedMotion = useReducedMotion();
   const [searchParams, setSearchParams] = useSearchParams();
 
   const activeTab = searchParams.get("tab") || "overview";
@@ -26,10 +27,10 @@ export const Content =() => {
 
  return ( 
   <motion.div
-    initial={{ x: "20%", opacity: 0 }}
-    animate={{ x: 0, opacity: 1 }}
-    exit={{ x: "-20%", opacity: 0, transition: { duration: 0.2 } }}
-    transition={transition}
+    initial={prefersReducedMotion ? false : { x: "20%", opacity: 0 }}
+    animate={prefersReducedMotion ? {} : { x: 0, opacity: 1 }}
+    exit={prefersReducedMotion ? {} : { x: "-20%", opacity: 0, transition: { duration: 0.2 } }}
+    transition={prefersReducedMotion ? {} : transition}
     className={styles.contentDiv}
   >
       <nav className={styles.nav}>
@@ -62,7 +63,7 @@ export const Content =() => {
         <h2 className={`${styles.h2} text-l`}>{selectedPlanet.name}</h2>
         <p className={`${styles.p} text-small`}>{selectedPlanet[activeTab].content}</p>
 
-        <p className={styles.source}>
+        <p className={styles.source} >
           <span>Source :</span>
           <a 
             href={selectedPlanet[activeTab].source}
