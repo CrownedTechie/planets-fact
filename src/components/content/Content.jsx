@@ -10,6 +10,7 @@ import { motion, useReducedMotion } from "framer-motion";
 export const Content =() => {
   const { planetName } = useParams();
   const { planetData } = useContext(PlanetContext);
+  const prefersReducedMotion = useReducedMotion();
   const [searchParams, setSearchParams] = useSearchParams();
 
   const activeTab = searchParams.get("tab") || "overview";
@@ -23,8 +24,6 @@ export const Content =() => {
     duration: 0.8,
     delay: 0.2,
   };
-
-  const prefersReducedMotion = useReducedMotion()
 
  return ( 
   <motion.div
