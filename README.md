@@ -32,7 +32,7 @@ Users should be able to:
 ![Desktop View](./public/planets-desktop-view.png)
 
 #### Tab View
-![Tab View](./public/planets-mobile-view.png)
+![Tab View](./public/planets-tab-view.png)
 
 #### Mobile View
 ![Mobile View](./public/planets-mobile-view.png)
